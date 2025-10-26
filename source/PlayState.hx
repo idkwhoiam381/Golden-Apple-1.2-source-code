@@ -1198,6 +1198,12 @@ class PlayState extends MusicBeatState
 		scoreTxt.cameras = [camHUD];
 		kadeEngineWatermark.cameras = [camHUD];
 		doof.cameras = [camHUD];
+
+		#if android
+		addAndroidControls();
+		androidc.visible = false;
+		#end
+
 		if(isRing)
 		{
 			ringCounter = new FlxSprite(1133, 30).loadGraphic(Paths.image('covers/gapple_counter'));
@@ -2356,7 +2362,9 @@ class PlayState extends MusicBeatState
 		boyfriend.canDance = true;
 		dad.canDance = true;
 		gf.canDance = true;
-
+		#if android
+		androidc.visible = true;
+		#end
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
@@ -4713,6 +4721,10 @@ class PlayState extends MusicBeatState
 				|| characteroverride == "bf" ? "bf" : characteroverride);
 			#end
 		}
+
+		#if android
+		androidc.visible = false;
+		#end
 
 		endingSong = true;
 
