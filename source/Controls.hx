@@ -310,7 +310,7 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-	{
+}
 		super(name);
 
 		add(_ui_up);
