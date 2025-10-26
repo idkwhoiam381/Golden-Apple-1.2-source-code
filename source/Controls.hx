@@ -310,7 +310,7 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-}
+	{
 		super(name);
 
 		add(_ui_up);
@@ -775,7 +775,6 @@ class Controls extends FlxActionSet
 		for (i in 0...copyKeys.length) {
 			if(i == NONE) copyKeys.remove(i);
 		}
-		#end
 
 	/**
 	 * Sets all actions that pertain to the binder to trigger when the supplied keys are used.
