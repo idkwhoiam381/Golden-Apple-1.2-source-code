@@ -81,6 +81,10 @@ class SaveFileState extends MusicBeatState
 		texty.setFormat('Comic Sans MS Bold', 24, FlxColor.WHITE, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(texty);
 
+		#if android
+        addVirtualPad(UP_DOWN, A_B);
+        #end
+
 		super.create();
 	}
 
